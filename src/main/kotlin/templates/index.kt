@@ -39,8 +39,7 @@ fun HTML.index(username: String?) {
         navbar(username != null, username)
         div("container mx-auto p-6") {
             id = "main-content"
-            h1("text-2xl font-bold") { +"Welcome to the Kotlin Web App" }
-            p("mt-4") { +"Explore the Home, Users, and About pages using the navbar above." }
+            homeDiv()
         }
     }
 }

@@ -2,10 +2,16 @@ package com.mach.templates
 
 import kotlinx.html.*
 
+fun DIV.homeDiv() {
+    h1("text-2xl font-bold") { +"Welcome to the Kotlin Web App" }
+    p("mt-4") { +"Explore the Home, Users, and About pages using the navbar above." }
+}
+
 fun HTML.home() {
     body {
-        h1("text-2xl font-bold") { +"Welcome to the Kotlin Web App" }
-        p("mt-4") { +"Explore the Home, Users, and About pages using the navbar above." }
+        div {
+            homeDiv()
+        }
     }
 }
 

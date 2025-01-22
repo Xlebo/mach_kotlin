@@ -1,9 +1,6 @@
 package com.mach.modules
 
-import com.mach.templates.aboutPage
-import com.mach.templates.index
-import com.mach.templates.loginPage
-import com.mach.templates.usersPage
+import com.mach.templates.*
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.html.*
@@ -22,7 +19,9 @@ fun Application.configureRouting() {
         }
 
         get("/home") {
-            call.respondRedirect("/")
+            call.respondHtml(HttpStatusCode.OK) {
+                home()
+            }
         }
 
         get("/users") {
